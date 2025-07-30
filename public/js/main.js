@@ -9,6 +9,9 @@ export const buildDisplay = async () => {
   const vidObj = await getVidData();
   const screenSize = await getScreenSize();
 
+  console.log("SCREEN SIZE");
+  console.log(screenSize);
+
   //includes drop down
   const header = await buildHeader(screenSize);
   displayElement.appendChild(header);

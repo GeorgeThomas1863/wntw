@@ -2,7 +2,7 @@ import { buildDropDown } from "./drop-down.js";
 
 const headerData = {
   url: "https://www.youtube.com/@WorldNewsThisWeek",
-  imageSrc: "images/WNTW_intro_pic1.png",
+  imageSrc: "images/WNTW_header_pic.png",
   imageAlt: "WNTW Profile Pic Fail",
   title: "WorldNewsThisWeek",
   tagline: "Sick of Garbage Reporting So Doing It Myself",
@@ -41,6 +41,9 @@ export const buildHeaderPicLink = async () => {
   const img = document.createElement("img");
   img.src = headerData.imageSrc;
   img.alt = headerData.imageAlt;
+
+  console.log("IMG");
+  console.log(img);
 
   link.appendChild(img);
 };
