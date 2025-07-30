@@ -33,10 +33,10 @@ export const buildVidDisplay = async (vidObj, screenSize) => {
 export const vidLayoutTemplate = async (vidObj, screenSize) => {
   const vidSize = vidDimensions[screenSize];
 
-  let containers = [];
+  let containerArray = [];
   switch (screenSize) {
     case "desktop":
-      containers = [
+      containerArray = [
         { id: "large-column1", vidSpecs: [{ size: vidSize.long, urls: [vidObj.firstLongURL, vidObj.thirdLongURL] }] },
         { id: "large-column2", vidSpecs: [{ size: vidSize.short, urls: [vidObj.firstShortURL] }] },
         { id: "large-column3", vidSpecs: [{ size: vidSize.long, urls: [vidObj.secondLongURL, vidObj.fourthLongURL] }] },
@@ -44,7 +44,7 @@ export const vidLayoutTemplate = async (vidObj, screenSize) => {
       break;
 
     case "tablet":
-      containers = [
+      containerArray = [
         { id: "yt-shorts-row-big", vidSpecs: [{ size: vidSize.short, urls: [vidObj.firstShortURL, vidObj.secondShortURL] }] },
         { id: "yt-shorts-row-small", vidSpecs: [{ size: vidSize.short, urls: [vidObj.firstShortURL, vidObj.secondShortURL] }] },
         { id: "yt-vids-row-big", vidSpecs: [{ size: vidSize.long, urls: [vidObj.firstLongURL, vidObj.secondLongURL] }] },
@@ -54,7 +54,7 @@ export const vidLayoutTemplate = async (vidObj, screenSize) => {
       break;
 
     case "bigPhone":
-      containers = [
+      containerArray = [
         { id: "large-column1", vidSpecs: [{ size: vidSize.long, urls: [vidObj.firstLongURL, vidObj.thirdLongURL] }] },
         { id: "large-column2", vidSpecs: [{ size: vidSize.short, urls: [vidObj.firstShortURL] }] },
         { id: "large-column3", vidSpecs: [{ size: vidSize.long, urls: [vidObj.secondLongURL, vidObj.fourthLongURL] }] },
@@ -62,14 +62,14 @@ export const vidLayoutTemplate = async (vidObj, screenSize) => {
       break;
 
     case "smallPhone":
-      containers = [
+      containerArray = [
         { id: null, vidSpecs: [{ size: vidSize.short, urls: [vidObj.firstShortURL] }] },
         { id: "yt-vid-wide", vidSpecs: [{ size: vidSize.long, urls: [vidObj.firstLongURL] }] },
       ];
       break;
   }
 
-  return containers;
+  return containerArray;
 };
 
 export const createVidIframe = async (width, height, link) => {
