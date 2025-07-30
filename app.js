@@ -1,3 +1,5 @@
+//TO DO: GET THE THUMBNAIL LOADING / DISPLAY TO WORK
+
 import express from "express";
 import routes from "./routes/routes.js";
 
