@@ -7,6 +7,7 @@ export const buildDropDownDisplay = async () => {
   const barsLink = document.createElement("a");
   barsLink.href = "#";
   barsLink.id = "drop-down-bars";
+  barsLink.setAttribute("data-dropdown-toggle", "true");
 
   // Create 3 spans for the hamburger menu using a loop
   for (let i = 0; i < 3; i++) {
@@ -31,6 +32,8 @@ export const buildDropDownDisplay = async () => {
     const link = document.createElement("a");
     link.href = menuItems[i].href;
     link.textContent = menuItems[i].text;
+    link.setAttribute("data-menu-item", menuItems[i].text.toLowerCase());
+
     h2.appendChild(link);
     menuDisplay.appendChild(h2);
   }

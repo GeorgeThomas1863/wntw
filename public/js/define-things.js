@@ -25,3 +25,8 @@ export const vidDimensions = {
     short: { width: "300", height: "533" },
   },
 };
+
+export const d = {
+  dropDownClickElement: document.getElementById("drop-down"),
+  dropDownMenuDisplayElement: document.getElementById("drop-down-menu-display"),
+};

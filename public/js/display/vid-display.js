@@ -86,7 +86,7 @@ export const createVidIframe = async (width, height, link) => {
   iframe.src = link;
   iframe.title = "YouTube video player";
   iframe.frameBorder = "0";
-  iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+  iframe.allow = "accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
   iframe.allowFullscreen = true;
   return iframe;
 };

@@ -17,19 +17,23 @@ export const buildHeaderDisplay = async (screenSize) => {
   const header = document.createElement("header");
   header.id = "header";
 
+  const picTextContainer = document.createElement("div");
+  picTextContainer.id = "pic-text-container";
+
   const firstPicLink = await buildHeaderPicLink();
   const logoText = await buildHeaderLogoText();
-  header.append(firstPicLink, logoText);
+  picTextContainer.append(firstPicLink, logoText);
 
   //return with just 2 items for phones
   if (screenSize === "smallPhone" || screenSize === "bigPhone") {
-    header.appendChild(dropDown);
+    header.appendChild(picTextContainer);
     return header;
   }
 
   //otherwise add in last pic linkk
   const secondPicLink = await buildHeaderPicLink();
-  header.append(secondPicLink, dropDown);
+  picTextContainer.appendChild(secondPicLink);
+  header.append(picTextContainer, dropDown);
 
   return header;
 };
