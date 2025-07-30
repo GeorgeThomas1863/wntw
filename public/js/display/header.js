@@ -42,10 +42,9 @@ export const buildHeaderPicLink = async () => {
   img.src = headerData.imageSrc;
   img.alt = headerData.imageAlt;
 
-  console.log("IMG");
-  console.log(img);
-
   link.appendChild(img);
+
+  return link;
 };
 
 export const buildHeaderLogoText = async () => {
