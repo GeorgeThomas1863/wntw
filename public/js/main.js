@@ -9,17 +9,17 @@ const displayElement = document.getElementById("display-element");
 export const buildDisplay = async () => {
   const screenSize = await getScreenSize();
 
-  const socialsObj = await getReqBackend({ route: "/api/socials-data" });
-  const vidObj = await getReqBackend({ route: "/api/vid-data" });
-
   console.log("SCREEN SIZE");
   console.log(screenSize);
+
+  const socialsArray = await getReqBackend("/api/socials-data");
+  const vidObj = await getReqBackend("/api/vid-data");
 
   //includes drop down
   const header = await buildHeaderDisplay(screenSize);
   displayElement.appendChild(header);
 
-  const socials = await buildSocialsDisplay(socialsObj);
+  const socials = await buildSocialsDisplay(socialsArray);
   displayElement.appendChild(socials);
 };
 

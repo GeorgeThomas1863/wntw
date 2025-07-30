@@ -14,7 +14,7 @@
   {
     "href": "https://www.instagram.com/worldnewsthisweek",
     "id": "insta-button",
-    "imgSrc": "images/icon_instagram.png",
+    "imgSrc": "images/icon_insta.png",
     "imgAlt": "Insta Link Fail"
   },
   {
@@ -26,7 +26,7 @@
   {
     "href": "https://www.facebook.com/profile.php?id=100066729360657",
     "id": "fb-button",
-    "imgSrc": "images/icon_facebook.png",
+    "imgSrc": "images/icon_fb.png",
     "imgAlt": "FB link Fail"
   }
 ]
