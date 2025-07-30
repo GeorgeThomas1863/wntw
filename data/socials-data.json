@@ -1,0 +1,32 @@
+[
+  {
+    "href": "https://www.youtube.com/@WorldNewsThisWeek",
+    "id": "yt-channel-link-button",
+    "imgSrc": "images/icon_youtube.png",
+    "imgAlt": "YT Link Fail"
+  },
+  {
+    "href": "https://tiktok.com/@worldnewsthisweek",
+    "id": "tiktok-button",
+    "imgSrc": "images/icon_tiktok.png",
+    "imgAlt": "TT Link Fail"
+  },
+  {
+    "href": "https://www.instagram.com/worldnewsthisweek",
+    "id": "insta-button",
+    "imgSrc": "images/icon_instagram.png",
+    "imgAlt": "Insta Link Fail"
+  },
+  {
+    "href": "https://x.com/w_n_t_w",
+    "id": "tweeter-button",
+    "imgSrc": "images/icon_twitter.png",
+    "imgAlt": "Tweeter Link Fail"
+  },
+  {
+    "href": "https://www.facebook.com/profile.php?id=100066729360657",
+    "id": "fb-button",
+    "imgSrc": "images/icon_facebook.png",
+    "imgAlt": "FB link Fail"
+  }
+]

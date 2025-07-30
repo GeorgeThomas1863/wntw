@@ -1,4 +1,4 @@
-export const buildDropDown = async () => {
+export const buildDropDownDisplay = async () => {
   // Create the main section
   const dropDownSection = document.createElement("section");
   dropDownSection.id = "drop-down";

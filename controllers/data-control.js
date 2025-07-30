@@ -1,9 +1,15 @@
-import { getVidObjFS } from "../src/main.js";
+import { getSocialsDataFS, getVidDataFS } from "../src/main-backend.js";
 
-export const getVidObjControl = async (req, res) => {
+export const getSocialsDataControl = async (req, res) => {
   //could add parsing for number of vids
-  const vidObj = await getVidObjFS();
-  console.log("VID OBJ");
-  console.log(vidObj);
-  res.json(vidObj);
+  const socialsData = await getSocialsDataFS();
+
+  res.json(socialsData);
+};
+
+export const getVidDataControl = async (req, res) => {
+  //could add parsing for number of vids
+  const vidData = await getVidDataFS();
+
+  res.json(vidData);
 };

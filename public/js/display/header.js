@@ -1,4 +1,4 @@
-import { buildDropDown } from "./drop-down.js";
+import { buildDropDownDisplay } from "./drop-down.js";
 
 const headerData = {
   url: "https://www.youtube.com/@WorldNewsThisWeek",
@@ -8,11 +8,11 @@ const headerData = {
   tagline: "Sick of Garbage Reporting So Doing It Myself",
 };
 
-export const buildHeader = async (screenSize) => {
+export const buildHeaderDisplay = async (screenSize) => {
   if (!screenSize) return null;
 
   //build drop down here
-  const dropDown = await buildDropDown();
+  const dropDown = await buildDropDownDisplay();
 
   const header = document.createElement("header");
   header.id = "header";

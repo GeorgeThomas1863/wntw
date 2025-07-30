@@ -1,26 +1,26 @@
 import { BREAKPOINTS } from "./define-things.js";
 import { getReqBackend } from "./util.js";
 
-import { buildHeader } from "./display/header.js";
+import { buildHeaderDisplay } from "./display/header.js";
+import { buildSocialsDisplay } from "./display/socials.js";
 
 const displayElement = document.getElementById("display-element");
 
 export const buildDisplay = async () => {
-  const vidObj = await getVidData();
   const screenSize = await getScreenSize();
+
+  const socialsObj = await getReqBackend({ route: "/api/socials-data" });
+  const vidObj = await getReqBackend({ route: "/api/vid-data" });
 
   console.log("SCREEN SIZE");
   console.log(screenSize);
 
   //includes drop down
-  const header = await buildHeader(screenSize);
+  const header = await buildHeaderDisplay(screenSize);
   displayElement.appendChild(header);
-};
 
-export const getVidData = async () => {
-  const route = "/api/vid-data";
-  const vidObj = await getReqBackend(route);
-  return vidObj;
+  const socials = await buildSocialsDisplay(socialsObj);
+  displayElement.appendChild(socials);
 };
 
 export const getScreenSize = async () => {
