@@ -1,0 +1,721 @@
+/* SMALL LAPTOPS*/
+@media (max-width: 1600px) {
+  #background-pic {
+    content: url("../images/WNTW_final_pic_crop1.jpg");
+    opacity: 0.3;
+  }
+
+  #medium-browser,
+  #profile-small-browser {
+    display: block;
+  }
+
+  #yt-shorts-row-big,
+  #yt-vids-row-big {
+    margin-top: 1rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  #profile-large-browser,
+  #large-browser,
+  #small-browser,
+  #tiny-browser,
+  #miniscule-browser,
+  #stupid-browser,
+  #yt-shorts-row-small,
+  #yt-vids-row-small,
+  #yt-vids-row-tiny {
+    display: none;
+  }
+
+  .yt-vid:hover {
+    transform: none;
+  }
+
+  #profile-small-browser {
+    margin-bottom: 1.5rem;
+  }
+
+  header a {
+    width: max-content;
+    margin: 0 auto;
+  }
+
+  header img {
+    width: 17rem;
+  }
+
+  header h1 {
+    font-size: 8.5rem;
+    margin-top: -1rem;
+  }
+
+  header p {
+    font-size: 2.5rem;
+    margin-top: 7.5rem;
+  }
+
+  #drop-down {
+    margin-top: 5rem;
+    margin-left: -5rem;
+  }
+
+  #drop-down-bars {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  #drop-down a span {
+    height: 0.75rem;
+  }
+
+  #drop-down-menu-display {
+    margin-left: -4rem;
+  }
+
+  #drop-down-menu-display h2 {
+    padding: 1.5rem 2.5rem;
+  }
+
+  #socials {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  #socials img {
+    height: 6rem;
+  }
+}
+
+/* IPAD STYLES PORTRAIT*/
+@media (max-device-width: 1100px) and (orientation: portrait) {
+  #background-pic {
+    content: url("../images/WNTW_final_pic_crop1.jpg");
+    opacity: 0.3;
+  }
+
+  #medium-browser,
+  #profile-small-browser {
+    display: block;
+  }
+
+  #yt-shorts-row-big,
+  #yt-vids-row-big {
+    margin-top: 1rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  #profile-large-browser,
+  #large-browser,
+  #small-browser,
+  #tiny-browser,
+  #miniscule-browser,
+  #stupid-browser,
+  #yt-shorts-row-small,
+  #yt-vids-row-small,
+  #yt-vids-row-tiny {
+    display: none;
+  }
+
+  .yt-vid:hover {
+    transform: none;
+  }
+
+  header img {
+    width: 15rem;
+  }
+
+  header h1 {
+    font-size: 7rem;
+  }
+
+  header p {
+    margin-top: 6.1rem;
+  }
+
+  #drop-down {
+    margin-left: -10rem;
+  }
+
+  #drop-down-bars {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  #drop-down a span {
+    height: 0.5rem;
+  }
+
+  #drop-down-menu-display {
+    margin-left: -3.6rem;
+  }
+
+  #drop-down-menu-display h2 {
+    font-size: 2.5rem;
+    padding: 0.75rem 2rem;
+  }
+}
+
+@media (max-device-width: 900px) and (orientation: portrait) {
+  #background-pic {
+    content: url("../images/WNTW_final_pic_crop1.jpg");
+    opacity: 0.3;
+  }
+
+  #yt-vids-row-small {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  #yt-shorts-row-big {
+    margin-top: 1rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  #medium-browser,
+  #profile-small-browser {
+    display: block;
+  }
+
+  #profile-large-browser,
+  #large-browser,
+  #small-browser,
+  #tiny-browser,
+  #miniscule-browser,
+  #stupid-browser,
+  #yt-shorts-row-small,
+  #yt-vids-row-big,
+  #yt-vids-row-tiny {
+    display: none;
+  }
+
+  .yt-vid:hover {
+    transform: none;
+  }
+
+  header h1 {
+    font-size: 5rem;
+    margin-top: 0;
+  }
+
+  header p {
+    font-size: 1.7rem;
+    margin-top: 5rem;
+  }
+
+  #drop-down {
+    margin-left: -5rem;
+  }
+
+  #socials {
+    margin-top: 0.5rem;
+  }
+
+  #socials img {
+    height: 5rem;
+  }
+}
+
+@media (max-device-width: 700px) and (orientation: portrait) {
+  #background-pic {
+    content: url("../images/WNTW_final_pic_crop1.jpg");
+    opacity: 0.3;
+  }
+
+  #yt-shorts-row-small,
+  #yt-vids-row-tiny {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  #medium-browser,
+  #profile-small-browser {
+    display: block;
+  }
+
+  #profile-large-browser,
+  #large-browser,
+  #small-browser,
+  #tiny-browser,
+  #miniscule-browser,
+  #stupid-browser,
+  #yt-shorts-row-big,
+  #yt-vids-row-small,
+  #yt-vids-row-big {
+    display: none;
+  }
+
+  .yt-vid:hover {
+    transform: none;
+  }
+
+  header img {
+    width: 10rem;
+  }
+
+  header h1 {
+    font-size: 4rem;
+  }
+
+  header p {
+    font-size: 1.4rem;
+    margin-top: 4rem;
+  }
+
+  #drop-down {
+    margin-top: 3.5rem;
+    margin-left: -5rem;
+  }
+
+  #drop-down-bars {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  #drop-down a span {
+    height: 0.25rem;
+  }
+
+  #drop-down-menu-display {
+    margin-left: -2.4rem;
+  }
+
+  #drop-down-menu-display h2 {
+    font-size: 1.7rem;
+    padding: 0.5rem 1.2rem;
+  }
+
+  #socials {
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  #socials img {
+    height: 4.5rem;
+  }
+}
+
+@media (max-device-width: 560px) and (orientation: portrait) {
+  #background-pic {
+    content: url("../images/WNTW_final_pic_crop1.jpg");
+    opacity: 0.3;
+  }
+
+  #yt-shorts-row-small,
+  #yt-vids-row-tiny {
+    gap: 0.5rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  #medium-browser,
+  #profile-small-browser {
+    display: block;
+  }
+
+  #profile-large-browser,
+  #large-browser,
+  #small-browser,
+  #tiny-browser,
+  #miniscule-browser,
+  #stupid-browser,
+  #yt-shorts-row-big,
+  #yt-vids-row-small,
+  #yt-vids-row-big {
+    display: none;
+  }
+
+  .yt-vid:hover {
+    transform: none;
+  }
+
+  header h1 {
+    font-size: 3.2rem;
+  }
+
+  header p {
+    font-size: 1.2rem;
+    margin-top: 3.2rem;
+  }
+
+  #socials {
+    margin-top: 0;
+    gap: 1rem;
+  }
+
+  #socials img {
+    height: 4rem;
+  }
+
+  #yt-shorts-row-small,
+  #yt-vids-row-tiny {
+    gap: 0.5rem;
+  }
+}
+
+/* PHONE STYLES PORTRAIT */
+@media (max-device-width: 500px) and (orientation: portrait) {
+  #background-pic {
+    content: url("../images/WNTW_final_pic_crop7.jpg");
+    opacity: 0.4;
+  }
+
+  #small-browser,
+  #profile-small-browser {
+    display: block;
+  }
+
+  #large-browser,
+  #medium-browser,
+  #tiny-browser,
+  #miniscule-browser,
+  #stupid-browser,
+  #profile-large-browser {
+    display: none;
+  }
+
+  header {
+    margin-top: 0;
+  }
+
+  header img {
+    width: 9rem;
+  }
+
+  header h1 {
+    margin-top: 0.1rem;
+    font-size: 3rem;
+  }
+
+  header p {
+    font-size: 1rem;
+    margin-top: 3.1rem;
+  }
+
+  #drop-down {
+    margin-top: 3rem;
+    margin-left: -4.5rem;
+  }
+
+  #drop-down-menu-display {
+    margin-left: -2.2rem;
+  }
+
+  #drop-down-menu-display h2 {
+    font-size: 1.5rem;
+    padding: 0.5rem 1.2rem;
+  }
+
+  #socials {
+    gap: 1rem;
+    margin-top: -0.25rem;
+    margin-bottom: 1rem;
+  }
+
+  #socials img {
+    height: 3.5rem;
+  }
+
+  #yt-shorts-row-big {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  #yt-vid-wide {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-device-width: 415px) and (orientation: portrait) {
+  #background-pic {
+    content: url("../images/WNTW_final_pic_crop7.jpg");
+    opacity: 0.4;
+  }
+
+  #tiny-browser,
+  #profile-small-browser {
+    display: block;
+  }
+
+  #large-browser,
+  #medium-browser,
+  #small-browser,
+  #miniscule-browser,
+  #stupid-browser,
+  #profile-large-browser {
+    display: none;
+  }
+
+  header img {
+    width: 8rem;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  header p {
+    margin-top: 2.6rem;
+  }
+
+  #drop-down {
+    margin-top: 2.5rem;
+    margin-left: -3.5rem;
+  }
+
+  #drop-down-menu-display {
+    margin-left: -1.5rem;
+  }
+
+  #drop-down-menu-display h2 {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+  }
+
+  #socials {
+    margin-top: -0.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  #socials img {
+    height: 3.5rem;
+  }
+}
+
+@media (max-device-width: 350px) and (orientation: portrait) {
+  #background-pic {
+    content: url("../images/WNTW_final_pic_crop7.jpg");
+    opacity: 0.4;
+  }
+
+  #miniscule-browser,
+  #profile-small-browser {
+    display: block;
+  }
+
+  #large-browser,
+  #medium-browser,
+  #small-browser,
+  #tiny-browser,
+  #stupid-browser,
+  #profile-large-browser {
+    display: none;
+  }
+
+  header img {
+    width: 6rem;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header p {
+    font-size: 0.75rem;
+    margin-top: 1.9rem;
+  }
+
+  #drop-down {
+    margin-top: 1.5rem;
+    margin-left: -2rem;
+  }
+
+  #socials img {
+    height: 3rem;
+  }
+}
+
+@media (max-device-width: 300px) and (orientation: portrait) {
+  #background-pic {
+    content: url("../images/WNTW_final_pic_crop7.jpg");
+    opacity: 0.4;
+  }
+
+  #stupid-browser,
+  #profile-small-browser {
+    display: block;
+  }
+
+  #large-browser,
+  #medium-browser,
+  #small-browser,
+  #tiny-browser,
+  #miniscule-browser,
+  #profile-large-browser,
+  #yt-vids-row,
+  #drop-down,
+  #miniscule-browser {
+    display: none;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  header p {
+    font-size: 0.5rem;
+    margin-top: 1.3rem;
+  }
+
+  #socials img {
+    height: 2rem;
+  }
+}
+
+/* PHONE STYLES LANDSCAPE */
+
+@media (max-device-width: 700px) and (orientation: landscape) {
+  #background-pic {
+    content: url("../images/WNTW_final_pic_crop7.jpg");
+    opacity: 0.4;
+  }
+
+  #tiny-browser,
+  #profile-small-browser {
+    display: block;
+  }
+
+  #large-browser,
+  #medium-browser,
+  #small-browser,
+  #miniscule-browser,
+  #stupid-browser,
+  #profile-large-browser {
+    display: none;
+  }
+
+  header img {
+    width: 8rem;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  header p {
+    margin-top: 2.6rem;
+  }
+
+  #drop-down-bars {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  #drop-down a span {
+    height: 0.25rem;
+  }
+
+  #drop-down-menu-display {
+    margin-left: -1.5rem;
+  }
+
+  #drop-down-menu-display h2 {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+  }
+
+  #socials {
+    margin-top: -0.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  #socials img {
+    height: 3.5rem;
+  }
+}
+
+@media (max-device-width: 1150px) and (orientation: landscape) {
+  #background-pic {
+    content: url("../images/WNTW_final_pic_crop7.jpg");
+    opacity: 0.4;
+  }
+
+  #small-browser,
+  #profile-small-browser {
+    display: block;
+  }
+
+  #large-browser,
+  #medium-browser,
+  #tiny-browser,
+  #miniscule-browser,
+  #stupid-browser,
+  #profile-large-browser {
+    display: none;
+  }
+
+  header {
+    margin-top: 0;
+  }
+
+  header img {
+    width: 9rem;
+  }
+
+  header h1 {
+    margin-top: 0.1rem;
+    font-size: 3rem;
+  }
+
+  header p {
+    font-size: 1rem;
+    margin-top: 3.1rem;
+  }
+
+  #drop-down {
+    margin-top: 3rem;
+    margin-left: -4.5rem;
+  }
+
+  #drop-down-bars {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  #drop-down a span {
+    height: 0.25rem;
+  }
+
+  #drop-down-menu-display {
+    margin-left: -2.2rem;
+  }
+
+  #drop-down-menu-display h2 {
+    font-size: 1.5rem;
+    padding: 0.5rem 1.2rem;
+  }
+
+  #socials {
+    gap: 1rem;
+    margin-top: -0.25rem;
+    margin-bottom: 1rem;
+  }
+
+  #socials img {
+    height: 3.5rem;
+  }
+
+  #yt-shorts-row-big {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  #yt-vid-wide {
+    margin-top: 0.5rem;
+  }
+}
