@@ -8,6 +8,8 @@ export const buildVidDisplay = async (vidObj, screenSize) => {
 
   //get cotnainers from template
   const containerArray = await vidLayoutTemplate(vidObj, screenSize);
+  console.log("CONTAINER ARRAY");
+  console.log(containerArray);
 
   for (let i = 0; i < containerArray.length; i++) {
     const containerData = containerArray[i];
@@ -19,8 +21,12 @@ export const buildVidDisplay = async (vidObj, screenSize) => {
     // Create videos for this column
     for (let j = 0; j < containerData.vidSpecs.length; j++) {
       const video = containerData.vidSpecs[j];
-      const iframe = createVidIframe(video.width, video.height, video.link);
-      container.appendChild(iframe);
+      for (let k = 0; k < video.urls.length; k++) {
+        const iframe = await createVidIframe(video.size.width, video.size.height, video.urls[k]);
+        // console.log("IFRAME");
+        // console.log(iframe);
+        container.appendChild(iframe);
+      }
     }
 
     vidDisplay.appendChild(container);

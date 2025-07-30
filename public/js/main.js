@@ -23,6 +23,8 @@ export const buildDisplay = async () => {
     displayElement.appendChild(socials);
 
     const vidDisplay = await buildVidDisplay(vidObj, screenSize);
+    // console.log("VID DISPLAY");
+    // console.log(vidDisplay);
     displayElement.appendChild(vidDisplay);
   } catch (e) {
     console.log(e);

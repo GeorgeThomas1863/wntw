@@ -1,8 +1,8 @@
 export const buildSocialsDisplay = async (inputArray) => {
   if (!inputArray || !inputArray.length) return null;
 
-  console.log("INPUT ARRAY");
-  console.log(inputArray);
+  // console.log("INPUT ARRAY");
+  // console.log(inputArray);
 
   const socialsDiv = document.createElement("div");
   socialsDiv.id = "socials";
