@@ -1,11 +1,8 @@
-export const sendToBack = async (inputParams) => {
-  const { route } = inputParams;
-
-  //send all to backend
+export const getReqBackend = async (route) => {
+  //GET REQ
   try {
     const res = await fetch(route, {
-      method: "POST",
-      body: JSON.stringify(inputParams),
+      method: "GET",
       headers: {
         "Content-Type": "application/json",
       },
