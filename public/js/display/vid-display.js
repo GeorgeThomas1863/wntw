@@ -43,34 +43,30 @@ export const vidLayoutTemplate = async (vidObj, screenSize) => {
   switch (screenSize) {
     case "desktop":
       containerArray = [
-        { id: "large-column1", vidSpecs: [{ size: vidSize.long, urls: [vidObj.firstLongURL, vidObj.thirdLongURL] }] },
-        { id: "large-column2", vidSpecs: [{ size: vidSize.short, urls: [vidObj.firstShortURL] }] },
-        { id: "large-column3", vidSpecs: [{ size: vidSize.long, urls: [vidObj.secondLongURL, vidObj.fourthLongURL] }] },
+        { id: "desktop-column1", vidSpecs: [{ size: vidSize.long, urls: [vidObj.firstLongURL, vidObj.thirdLongURL] }] },
+        { id: "desktop-column2", vidSpecs: [{ size: vidSize.short, urls: [vidObj.firstShortURL] }] },
+        { id: "desktop-column3", vidSpecs: [{ size: vidSize.long, urls: [vidObj.secondLongURL, vidObj.fourthLongURL] }] },
       ];
       break;
 
     case "tablet":
       containerArray = [
-        { id: "yt-shorts-row-big", vidSpecs: [{ size: vidSize.short, urls: [vidObj.firstShortURL, vidObj.secondShortURL] }] },
-        { id: "yt-shorts-row-small", vidSpecs: [{ size: vidSize.short, urls: [vidObj.firstShortURL, vidObj.secondShortURL] }] },
-        { id: "yt-vids-row-big", vidSpecs: [{ size: vidSize.long, urls: [vidObj.firstLongURL, vidObj.secondLongURL] }] },
-        { id: "yt-vids-row-small", vidSpecs: [{ size: vidSize.long, urls: [vidObj.firstLongURL, vidObj.secondLongURL] }] },
-        { id: "yt-vids-row-tiny", vidSpecs: [{ size: vidSize.long, urls: [vidObj.firstLongURL, vidObj.secondLongURL] }] },
+        { id: "tablet-row1", vidSpecs: [{ size: vidSize.short, urls: [vidObj.firstShortURL, vidObj.secondShortURL] }] },
+        { id: "tablet-row2", vidSpecs: [{ size: vidSize.long, urls: [vidObj.firstLongURL, vidObj.secondLongURL] }] },
       ];
       break;
 
     case "bigPhone":
       containerArray = [
-        { id: "large-column1", vidSpecs: [{ size: vidSize.long, urls: [vidObj.firstLongURL, vidObj.thirdLongURL] }] },
-        { id: "large-column2", vidSpecs: [{ size: vidSize.short, urls: [vidObj.firstShortURL] }] },
-        { id: "large-column3", vidSpecs: [{ size: vidSize.long, urls: [vidObj.secondLongURL, vidObj.fourthLongURL] }] },
+        { id: "bigPhone-row1", vidSpecs: [{ size: vidSize.long, urls: [vidObj.firstShortURL, vidObj.secondShortURL] }] },
+        { id: "bigPhone-row2", vidSpecs: [{ size: vidSize.short, urls: [vidObj.firstLongURL] }] },
       ];
       break;
 
     case "smallPhone":
       containerArray = [
-        { id: null, vidSpecs: [{ size: vidSize.short, urls: [vidObj.firstShortURL] }] },
-        { id: "yt-vid-wide", vidSpecs: [{ size: vidSize.long, urls: [vidObj.firstLongURL] }] },
+        { id: "smallPhone-row1", vidSpecs: [{ size: vidSize.short, urls: [vidObj.firstShortURL] }] },
+        { id: "smallPhone-row2", vidSpecs: [{ size: vidSize.long, urls: [vidObj.firstLongURL] }] },
       ];
       break;
   }

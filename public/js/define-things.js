@@ -1,8 +1,8 @@
 export const BREAKPOINTS = {
-  desktop: 1200,
-  tablet: 1024,
-  bigPhone: 768,
-  smallPhone: 576,
+  desktop: 1200, //4 long 1 short
+  tablet: 1024, // 2 shorts 2 long 
+  bigPhone: 768, // 2 shorts 1 long
+  smallPhone: 576, //1 short 1 long
 };
 
 // Video size definitions
