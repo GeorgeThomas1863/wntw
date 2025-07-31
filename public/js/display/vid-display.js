@@ -22,7 +22,7 @@ export const buildVidDisplay = async (vidObj, screenSize) => {
     for (let j = 0; j < containerData.vidSpecs.length; j++) {
       const video = containerData.vidSpecs[j];
       for (let k = 0; k < video.urls.length; k++) {
-        const iframe = await buildThumbnailYT(video.size.width, video.size.height, video.urls[k]);
+        const iframe = await createVidIframe(video.size.width, video.size.height, video.urls[k]);
         // console.log("IFRAME");
         // console.log(iframe);
         container.appendChild(iframe);
@@ -78,89 +78,15 @@ export const vidLayoutTemplate = async (vidObj, screenSize) => {
   return containerArray;
 };
 
-export const buildThumbnailYT = async (width, height, url) => {
-  const vidId = extractVidIdYT(url);
-
-  console.log("Vid ID");
-  console.log(vidId);
-
-  if (!vidId) {
-    console.warn("Could not extract video ID from URL:", url);
-    return null;
-  }
-
-  const container = document.createElement("div");
-  container.className = "yt-vid youtube-thumbnail-container";
-  container.style.width = `${width}px`;
-  container.style.height = `${height}px`;
-
-  // Create thumbnail image
-  const thumbnail = document.createElement("img");
-  thumbnail.className = "youtube-thumbnail";
-  thumbnail.src = `https://img.youtube.com/vi/${vidId}/maxresdefault.jpg`;
-  thumbnail.alt = "YouTube video thumbnail";
-
-  // Create play button overlay
-  const playButton = document.createElement("div");
-  playButton.className = "youtube-play-button";
-  playButton.innerHTML = "▶";
-
-  // Hover effects
-  container.addEventListener("mouseenter", () => {
-    playButton.style.backgroundColor = "rgba(255, 0, 0, 0.9)";
-    playButton.style.transform = "translate(-50%, -50%) scale(1.1)";
-  });
-
-  container.addEventListener("mouseleave", () => {
-    playButton.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
-    playButton.style.transform = "translate(-50%, -50%) scale(1)";
-  });
-
-  // Click handler - redirect to YouTube
-  container.addEventListener("click", () => {
-    window.open(url, "_blank");
-  });
-
-  // Handle thumbnail load errors (fallback to lower quality)
-  thumbnail.addEventListener(
-    "error",
-    () => {
-      thumbnail.src = `https://img.youtube.com/vi/${vidId}/hqdefault.jpg`;
-
-      // If even the fallback fails, try one more fallback
-      thumbnail.addEventListener(
-        "error",
-        () => {
-          thumbnail.src = `https://img.youtube.com/vi/${vidId}/mqdefault.jpg`;
-        },
-        { once: true }
-      );
-    },
-    { once: true }
-  );
-
-  container.appendChild(thumbnail);
-  container.appendChild(playButton);
-
-  return container;
+export const createVidIframe = async (width, height, link) => {
+  const iframe = document.createElement("iframe");
+  iframe.className = "yt-vid";
+  iframe.width = width;
+  iframe.height = height;
+  iframe.src = link;
+  iframe.title = "YouTube video player";
+  iframe.allow = "encrypted-media; picture-in-picture";
+  iframe.allowFullscreen = true;
+  iframe.loading = "lazy";
+  return iframe;
 };
-
-export const extractVidIdYT = (url) => {
-  if (!url) return null;
-  const result = url.substring(url.indexOf("/embed/") + "/embed/".length);
-
-  return result;
-};
-
-// export const createVidIframe = async (width, height, link) => {
-//   const iframe = document.createElement("iframe");
-//   iframe.className = "yt-vid";
-//   iframe.width = width;
-//   iframe.height = height;
-//   iframe.src = link;
-//   iframe.title = "YouTube video player";
-//   iframe.frameBorder = "0";
-//   iframe.allow = "accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-//   iframe.allowFullscreen = true;
-//   return iframe;
-// };
