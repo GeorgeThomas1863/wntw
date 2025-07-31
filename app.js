@@ -1,4 +1,5 @@
-//TO DO: GET THE THUMBNAIL LOADING / DISPLAY TO WORK
+//TO DO: FINISH RESPONSIVE
+// FINISH STYLES / MEDIA STYLES
 
 import express from "express";
 import routes from "./routes/routes.js";
