@@ -4,10 +4,12 @@ export const clickHandler = async (e) => {
   e.preventDefault();
 
   const clickElement = e.target;
-  const dataType = clickElement.getAttribute("data-expand");
+  const dataType = clickElement.getAttribute("data-dropdown-toggle");
 
   console.log(clickElement);
   console.log(dataType);
+
+  if (dataType) await dropDownOpenClose();
 
   // console.log("CLICK ELEMENT");
   // console.log(clickElement);
@@ -47,4 +49,8 @@ export const dropDownOpenClose = async () => {
   return;
 };
 
-dropDownClickElement.addEventListener("click", clickHandler);
+const displayElement = document.getElementById("display-element");
+
+if (displayElement) {
+  displayElement.addEventListener("click", clickHandler);
+}
