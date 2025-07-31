@@ -1,3 +1,7 @@
+import { buildDisplay } from "./main.js";
+
+const displayElement = document.getElementById("display-element");
+
 export const clickHandler = async (e) => {
   e.preventDefault();
 
@@ -21,7 +25,32 @@ export const dropDownOpenClose = async () => {
   return;
 };
 
-const displayElement = document.getElementById("display-element");
+export const debounce = (func, wait) => {
+  let timeout;
+  return (...args) => {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+};
+
+// Debounced resize handler
+export const debouncedResizeHandler = debounce(async () => {
+  displayElement.innerHTML = "";
+  await buildDisplay();
+}, 300);
+
+///----------
+
+//event listeners
+window.addEventListener("resize", debouncedResizeHandler);
+
+document.addEventListener("DOMContentLoaded", async () => {
+  await buildDisplay();
+});
 
 if (displayElement) {
   displayElement.addEventListener("click", clickHandler);
