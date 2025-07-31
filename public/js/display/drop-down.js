@@ -19,6 +19,7 @@ export const buildDropDownDisplay = async () => {
   // Create the dropdown menu display div
   const menuDisplay = document.createElement("div");
   menuDisplay.id = "drop-down-menu-display";
+  menuDisplay.className = "hidden";
 
   // Menu items data
   const menuItems = [
