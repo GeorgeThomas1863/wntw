@@ -1,4 +1,5 @@
-import { backendGET, getScreenSize } from "./util.js";
+import { getScreenSize } from "./screen-size.js";
+import { backendGET, changeBackgroundPic } from "./util.js";
 import { buildHeaderDisplay } from "./display/header.js";
 import { buildSocialsDisplay } from "./display/socials.js";
 import { buildVidDisplay } from "./display/vid-display.js";
@@ -8,6 +9,8 @@ const displayElement = document.getElementById("display-element");
 export const buildDisplay = async () => {
   try {
     const screenSize = await getScreenSize();
+
+    await changeBackgroundPic(screenSize);
 
     console.log("SCREEN SIZE");
     console.log(screenSize);

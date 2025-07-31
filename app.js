@@ -1,4 +1,5 @@
-//TO DO: FINISH RESPONSIVE
+//TO DO: 
+//SET BACKGROUND PIC IN JS
 // FINISH STYLES / MEDIA STYLES
 
 import express from "express";

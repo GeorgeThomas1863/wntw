@@ -40,8 +40,8 @@ export const buildDropDownDisplay = async () => {
     menuDisplay.appendChild(h2);
   }
 
-  console.log("MENU DISPLAY");
-  console.log(menuDisplay);
+  // console.log("MENU DISPLAY");
+  // console.log(menuDisplay);
 
   // Assemble the complete structure
   dropDownSection.appendChild(barsLink);

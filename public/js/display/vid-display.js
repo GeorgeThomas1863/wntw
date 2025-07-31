@@ -1,4 +1,4 @@
-import { vidDimensions } from "../define-things.js";
+import { vidDimensions } from "../screen-size.js";
 
 export const buildVidDisplay = async (vidObj, screenSize) => {
   if (!vidObj || !screenSize) return null;
@@ -8,8 +8,8 @@ export const buildVidDisplay = async (vidObj, screenSize) => {
 
   //get cotnainers from template
   const containerArray = await vidLayoutTemplate(vidObj, screenSize);
-  console.log("CONTAINER ARRAY");
-  console.log(containerArray);
+  // console.log("CONTAINER ARRAY");
+  // console.log(containerArray);
 
   for (let i = 0; i < containerArray.length; i++) {
     const containerData = containerArray[i];
@@ -41,11 +41,12 @@ export const vidLayoutTemplate = async (vidObj, screenSize) => {
 
   let containerArray = [];
   switch (screenSize) {
-    case "desktop":
+    case "bigDesktop":
+    case "smallDesktop":
       containerArray = [
-        { id: "desktop-column1", vidSpecs: [{ size: vidSize.long, urls: [vidObj.firstLongURL, vidObj.thirdLongURL] }] },
-        { id: "desktop-column2", vidSpecs: [{ size: vidSize.short, urls: [vidObj.firstShortURL] }] },
-        { id: "desktop-column3", vidSpecs: [{ size: vidSize.long, urls: [vidObj.secondLongURL, vidObj.fourthLongURL] }] },
+        { id: "bigDesktop-column1", vidSpecs: [{ size: vidSize.long, urls: [vidObj.firstLongURL, vidObj.thirdLongURL] }] },
+        { id: "bigDesktop-column2", vidSpecs: [{ size: vidSize.short, urls: [vidObj.firstShortURL] }] },
+        { id: "bigDesktop-column3", vidSpecs: [{ size: vidSize.long, urls: [vidObj.secondLongURL, vidObj.fourthLongURL] }] },
       ];
       break;
 

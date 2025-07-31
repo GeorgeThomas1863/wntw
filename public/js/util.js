@@ -1,5 +1,3 @@
-import { BREAKPOINTS } from "./define-things.js";
-
 export const backendGET = async (route) => {
   //GET REQ
   try {
@@ -17,12 +15,22 @@ export const backendGET = async (route) => {
   }
 };
 
-export const getScreenSize = async () => {
-  const width = window.innerWidth;
-  const { smallPhone, bigPhone, tablet } = BREAKPOINTS;
+export const changeBackgroundPic = async (screenSize) => {
+  const backgroundPic = document.getElementById("background-pic");
 
-  if (width < smallPhone) return "smallPhone";
-  if (width < bigPhone) return "bigPhone";
-  if (width < tablet) return "tablet";
-  return "desktop";
+  switch (screenSize) {
+    case "bigDesktop":
+    case "smallDesktop":
+      backgroundPic.src = "/images/WNTW_background_main.jpg";
+      return;
+
+    case "tablet":
+      backgroundPic.src = "/images/WNTW_background_crop1.jpg";
+      return;
+
+    case "bigPhone":
+    case "smallPhone":
+      backgroundPic.src = "/images/WNTW_background_crop2.jpg";
+      return;
+  }
 };
