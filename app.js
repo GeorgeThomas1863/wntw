@@ -1,5 +1,4 @@
-//TO DO: 
-//SET BACKGROUND PIC IN JS
+//TO DO:
 // FINISH STYLES / MEDIA STYLES
 
 import express from "express";
