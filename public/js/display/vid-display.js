@@ -66,8 +66,8 @@ export const vidLayoutTemplate = async (vidObj, screenSize) => {
 
     case "bigPhone":
       containerArray = [
-        { id: "bigPhone-row1", vidSpecs: [{ size: vidSize.long, urls: [vidObj.firstShortURL, vidObj.secondShortURL] }] },
-        { id: "bigPhone-row2", vidSpecs: [{ size: vidSize.short, urls: [vidObj.firstLongURL] }] },
+        { id: "bigPhone-row1", vidSpecs: [{ size: vidSize.short, urls: [vidObj.firstShortURL, vidObj.secondShortURL] }] },
+        { id: "bigPhone-row2", vidSpecs: [{ size: vidSize.long, urls: [vidObj.firstLongURL] }] },
       ];
       break;
 
