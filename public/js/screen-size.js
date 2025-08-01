@@ -17,7 +17,7 @@ export const getScreenSize = async () => {
   const { bigPhone, tablet, smallDesktop, bigDesktop } = BREAKPOINTS;
 
   console.log("WIDTH");
-  console.log(width);
+  console.log(width); 
 
   if (width > bigDesktop) return "bigDesktop";
   if (width > smallDesktop) return "smallDesktop";
