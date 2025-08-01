@@ -1,5 +1,5 @@
 //TO DO:
-// ON TABLET STYLES, THEN IPHONE STYLES
+// ON IPHONE STYLES
 
 import express from "express";
 import routes from "./routes/routes.js";
