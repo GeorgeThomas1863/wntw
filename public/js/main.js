@@ -8,6 +8,8 @@ const displayElement = document.getElementById("display-element");
 
 export const buildDisplay = async () => {
   try {
+    displayElement.innerHTML = "";
+
     const screenSize = await getScreenSize();
 
     await changeBackgroundPic(screenSize);

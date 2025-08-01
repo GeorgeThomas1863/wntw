@@ -48,9 +48,9 @@ export const debouncedResizeHandler = debounce(async () => {
 //event listeners
 window.addEventListener("resize", debouncedResizeHandler);
 
-document.addEventListener("DOMContentLoaded", async () => {
-  await buildDisplay();
-});
+// document.addEventListener("DOMContentLoaded", async () => {
+//   await buildDisplay();
+// });
 
 if (displayElement) {
   displayElement.addEventListener("click", clickHandler);

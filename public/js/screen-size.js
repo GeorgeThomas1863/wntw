@@ -1,12 +1,12 @@
 // 1600+ = bigDesktop //4 long 1 short
-// 1024-1599 = smallDesktop //4 long 1 short
-// 768-1023 = tablet // 2 shorts 2 long
+// 1100-1599 = smallDesktop //4 long 1 short
+// 768-1099 = tablet // 2 shorts 2 long
 // 401-767 = bigPhone // 2 shorts 1 long
 // <400 = smallPhone //1 short 1 long
 
 export const BREAKPOINTS = {
   bigDesktop: 1600,
-  smallDesktop: 1024,
+  smallDesktop: 1100,
   tablet: 768,
   bigPhone: 401,
   // smallPhone: <400,
@@ -17,7 +17,7 @@ export const getScreenSize = async () => {
   const { bigPhone, tablet, smallDesktop, bigDesktop } = BREAKPOINTS;
 
   console.log("WIDTH");
-  console.log(width); 
+  console.log(width);
 
   if (width > bigDesktop) return "bigDesktop";
   if (width > smallDesktop) return "smallDesktop";
@@ -34,8 +34,8 @@ export const vidDimensions = {
   },
 
   smallDesktop: {
-    long: { width: "560", height: "315" },
-    short: { width: "315", height: "560" },
+    long: { width: "504", height: "284" },
+    short: { width: "284", height: "504" },
   },
 
   tablet: {
