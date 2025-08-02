@@ -1,6 +1,3 @@
-//TO DO:
-// ON IPHONE STYLES
-
 import express from "express";
 import routes from "./routes/routes.js";
 

@@ -15,18 +15,31 @@ export const BREAKPOINTS = {
 };
 
 export const getScreenSize = async () => {
-  const width = window.innerWidth;
   const { bigPhone, tablet, smallDesktop, tinyDesktop, bigDesktop } = BREAKPOINTS;
 
-  console.log("WIDTH");
-  console.log(width);
+  //get size that will define screen size
+  const sizeItem = await getSizeItem();
 
-  if (width > bigDesktop) return "bigDesktop";
-  if (width > smallDesktop) return "smallDesktop";
-  if (width > tinyDesktop) return "tinyDesktop";
-  if (width > tablet) return "tablet";
-  if (width > bigPhone) return "bigPhone";
+  console.log("sizeItem");
+  console.log(sizeItem);
+
+  if (sizeItem > bigDesktop) return "bigDesktop";
+  if (sizeItem > smallDesktop) return "smallDesktop";
+  if (sizeItem > tinyDesktop) return "tinyDesktop";
+  if (sizeItem > tablet) return "tablet";
+  if (sizeItem > bigPhone) return "bigPhone";
   return "smallPhone";
+};
+
+export const getSizeItem = async () => {
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+
+  //desktop
+  if (width > 1100) return width;
+
+  //return smaller for table / phone
+  return Math.min(width, height);
 };
 
 // Video size definitions
