@@ -1,12 +1,14 @@
 // 1600+ = bigDesktop //4 long 1 short
-// 1100-1599 = smallDesktop //4 long 1 short
+// 1350-1599 = smallDesktop //4 long 1 short
+// 1100-1349 = tinyDesktop //4 long 1 short
 // 768-1099 = tablet // 2 shorts 2 long
 // 401-767 = bigPhone // 2 shorts 1 long
 // <400 = smallPhone //1 short 1 long
 
 export const BREAKPOINTS = {
   bigDesktop: 1600,
-  smallDesktop: 1100,
+  smallDesktop: 1350,
+  tinyDesktop: 1100,
   tablet: 768,
   bigPhone: 401,
   // smallPhone: <400,
@@ -38,14 +40,19 @@ export const vidDimensions = {
     short: { width: "284", height: "504" },
   },
 
+  tinyDesktop: {
+    long: { width: "392", height: "221" },
+    short: { width: "221", height: "392" },
+  },
+
   tablet: {
     long: { width: "500", height: "281" },
     short: { width: "250", height: "444" },
   },
 
   bigPhone: {
-    long: { width: "350", height: "197" },
-    short: { width: "200", height: "356" },
+    long: { width: "560", height: "315" },
+    short: { width: "315", height: "560" },
   },
 
   smallPhone: {

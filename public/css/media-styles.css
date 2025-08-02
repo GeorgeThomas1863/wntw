@@ -4,6 +4,10 @@
     font-size: 6rem;
   }
 
+  header p {
+    margin-top: 6rem;
+  }
+
   #drop-down {
     right: 3rem;
   }
@@ -17,12 +21,11 @@
   }
 
   #vid-display {
-    margin-right: 1rem;
+    gap: 1rem;
+    /* margin-right: 1rem; */
   }
 
-  header p {
-    margin-top: 7rem;
-  }
+ 
 }
 
 @media (max-width: 1350px) {
@@ -93,14 +96,14 @@
     display: block;
   }
 
+  /* #vid-display iframe {
+    width: unset;
+  } */
+
   #tablet-row1 {
     display: flex;
     justify-content: center;
     gap: 1rem;
-  }
-
-  #tablet-row1 iframe {
-    width: auto;
   }
 
   #tablet-row2 {
@@ -118,7 +121,7 @@
 
 /* BIG PHONE STYLES PORTRAIT*/
 @media (max-device-width: 768px) and (orientation: portrait) {
-  header img {
+  /* header img {
     width: 8rem;
   }
 
@@ -151,7 +154,7 @@
 
   #socials img {
     height: 3.5rem;
-  }
+  } */
 
   #bigPhone-row1 {
     display: flex;
@@ -159,13 +162,19 @@
     gap: 1rem;
   }
 
-  #bigPhone-row1 iframe {
-    width: auto;
-  }
+  /* #bigPhone-row1 iframe {
+    width: unset;
+  } */
 
   #bigPhone-row2 {
     margin-top: 1rem;
+    display: flex;
+    justify-content: center;
   }
+
+  /* #bigPhone-row2 iframe {
+    width: 100%;
+  } */
 }
 
 /* SMALL PHONE STYLES PORTRAIT*/

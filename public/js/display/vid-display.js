@@ -42,6 +42,8 @@ export const vidLayoutTemplate = async (vidObj, screenSize) => {
   let containerArray = [];
   switch (screenSize) {
     case "bigDesktop":
+    case "smallDesktop":
+    case "tinyDesktop":
       containerArray = [
         { id: "bigDesktop-column1", vidSpecs: [{ size: vidSize.long, urls: [vidObj.firstLongURL, vidObj.thirdLongURL] }] },
         { id: "bigDesktop-column2", vidSpecs: [{ size: vidSize.short, urls: [vidObj.firstShortURL] }] },
@@ -49,13 +51,13 @@ export const vidLayoutTemplate = async (vidObj, screenSize) => {
       ];
       break;
 
-    case "smallDesktop":
-      containerArray = [
-        { id: "bigDesktop-column1", vidSpecs: [{ size: vidSize.long, urls: [vidObj.firstLongURL, vidObj.thirdLongURL] }] },
-        { id: "bigDesktop-column2", vidSpecs: [{ size: vidSize.short, urls: [vidObj.firstShortURL] }] },
-        { id: "bigDesktop-column3", vidSpecs: [{ size: vidSize.long, urls: [vidObj.secondLongURL, vidObj.fourthLongURL] }] },
-      ];
-      break;
+    // case "smallDesktop":
+    //   containerArray = [
+    //     { id: "bigDesktop-column1", vidSpecs: [{ size: vidSize.long, urls: [vidObj.firstLongURL, vidObj.thirdLongURL] }] },
+    //     { id: "bigDesktop-column2", vidSpecs: [{ size: vidSize.short, urls: [vidObj.firstShortURL] }] },
+    //     { id: "bigDesktop-column3", vidSpecs: [{ size: vidSize.long, urls: [vidObj.secondLongURL, vidObj.fourthLongURL] }] },
+    //   ];
+    //   break;
 
     case "tablet":
       containerArray = [

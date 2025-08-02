@@ -38,9 +38,9 @@ section {
   text-align: center;
 }
 
-header {
+/* header {
   margin-top: 1rem;
-}
+} */
 
 #pic-text-container {
   display: flex;
@@ -71,7 +71,7 @@ header p {
   font-size: 1.5rem;
   font-style: italic;
   position: absolute;
-  margin-top: 7.5rem;
+  margin-top: 7rem;
 }
 
 #drop-down {
@@ -124,7 +124,7 @@ header p {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 0.8rem;
 }
 
@@ -143,10 +143,14 @@ header p {
   gap: 3rem;
 }
 
-#vid-display iframe {
+#bigDesktop-column1 {
+  text-align: right;
+}
+
+/* #vid-display iframe {
   width: 100%;
   margin-bottom: 0.2rem;
-}
+} */
 
 .yt-vid {
   border-radius: 1.5rem;
