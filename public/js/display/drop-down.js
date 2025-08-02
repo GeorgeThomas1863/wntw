@@ -23,9 +23,9 @@ export const buildDropDownDisplay = async () => {
 
   // Menu items data
   const menuItems = [
-    { text: "About", href: "/about" },
-    { text: "FAQ", href: "/faq" },
-    { text: "Contact", href: "/contact" },
+    { text: "About", href: "/other" },
+    { text: "FAQ", href: "/other" },
+    { text: "Contact", href: "/other" },
   ];
 
   // Create menu items using a loop

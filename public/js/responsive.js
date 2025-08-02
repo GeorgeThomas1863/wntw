@@ -6,15 +6,16 @@ const displayElement = document.getElementById("display-element");
 let lastWidth = window.innerWidth;
 
 export const clickHandler = async (e) => {
-  e.preventDefault();
-
   const clickElement = e.target;
   const dataType = clickElement.getAttribute("data-dropdown-toggle");
 
   console.log(clickElement);
   console.log(dataType);
 
-  if (dataType) await dropDownOpenClose();
+  if (dataType) {
+    e.preventDefault();
+    await dropDownOpenClose();
+  }
 };
 
 export const dropDownOpenClose = async () => {
