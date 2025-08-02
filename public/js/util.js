@@ -20,17 +20,25 @@ export const changeBackgroundPic = async (screenSize) => {
 
   switch (screenSize) {
     case "bigDesktop":
-    case "smallDesktop":
       backgroundPic.src = "/images/WNTW_background_main.jpg";
+      backgroundPic.style.opacity = 0.15;
+      return;
+
+    case "smallDesktop":
+    case "tinyDesktop":
+      backgroundPic.src = "/images/WNTW_background_main.jpg";
+      backgroundPic.style.opacity = 0.3;
       return;
 
     case "tablet":
       backgroundPic.src = "/images/WNTW_background_crop1.jpg";
+      backgroundPic.style.opacity = 0.3;
       return;
 
     case "bigPhone":
     case "smallPhone":
       backgroundPic.src = "/images/WNTW_background_crop2.jpg";
+      backgroundPic.style.opacity = 0.4;
       return;
   }
 };

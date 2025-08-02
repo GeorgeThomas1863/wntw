@@ -2,6 +2,9 @@ import { buildDisplay } from "./main.js";
 
 const displayElement = document.getElementById("display-element");
 
+//track width
+let lastWidth = window.innerWidth;
+
 export const clickHandler = async (e) => {
   e.preventDefault();
 
@@ -39,18 +42,26 @@ export const debounce = (func, wait) => {
 
 // Debounced resize handler
 export const debouncedResizeHandler = debounce(async () => {
+  const currentWidth = window.innerWidth;
+
+  //only rebuild on big width change
+  if (Math.abs(currentWidth - lastWidth) < 20) {
+    console.log(`Width change too small (${Math.abs(currentWidth - lastWidth)}px) - ignoring`);
+    return null;
+  }
+
+  //rebuild display
+  console.log(`Width changed from ${lastWidth} to ${currentWidth} - rebuilding display`);
   displayElement.innerHTML = "";
   await buildDisplay();
+
+  lastWidth = currentWidth;
 }, 300);
 
 ///----------
 
 //event listeners
 window.addEventListener("resize", debouncedResizeHandler);
-
-// document.addEventListener("DOMContentLoaded", async () => {
-//   await buildDisplay();
-// });
 
 if (displayElement) {
   displayElement.addEventListener("click", clickHandler);
