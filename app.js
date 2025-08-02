@@ -1,5 +1,3 @@
-//TODO: favicons and background pics
-
 import express from "express";
 import routes from "./routes/routes.js";
 

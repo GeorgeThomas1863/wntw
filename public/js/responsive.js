@@ -10,7 +10,7 @@ export const clickHandler = async (e) => {
   const dataType = clickElement.getAttribute("data-dropdown-toggle");
 
   console.log(clickElement);
-  console.log(dataType);
+  // console.log(dataType);
 
   if (dataType) {
     e.preventDefault();

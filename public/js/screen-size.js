@@ -20,8 +20,8 @@ export const getScreenSize = async () => {
   //get size that will define screen size
   const sizeItem = await getSizeItem();
 
-  console.log("sizeItem");
-  console.log(sizeItem);
+  // console.log("sizeItem");
+  // console.log(sizeItem);
 
   if (sizeItem > bigDesktop) return "bigDesktop";
   if (sizeItem > smallDesktop) return "smallDesktop";

@@ -14,8 +14,8 @@ export const buildHeaderDisplay = async (screenSize) => {
   //build drop down here
   const dropDown = await buildDropDownDisplay();
 
-  console.log("DROP DOWN");
-  console.log(dropDown);
+  // console.log("DROP DOWN");
+  // console.log(dropDown);
 
   const header = document.createElement("header");
   header.id = "header";
