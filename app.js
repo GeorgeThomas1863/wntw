@@ -1,3 +1,5 @@
+//TODO: actually add about page
+
 import express from "express";
 import routes from "./routes/routes.js";
 
