@@ -47,8 +47,14 @@
   }
 
   header p {
+    font-size: 1.2rem;
     margin-top: 5rem;
   }
+
+  #drop-down-menu-display {
+    margin-left: -5rem;
+  }
+
 
   #vid-display {
     margin-right: 0;
@@ -111,12 +117,12 @@
     display: flex;
     justify-content: center;
     gap: 1rem;
-    width: 100%;
+  
   }
 
-  #tablet-row2 iframe {
-    width: 90%;
-  }
+  /* #tablet-row2 iframe {
+
+  } */
 }
 
 /* BIG PHONE STYLES PORTRAIT*/

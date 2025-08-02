@@ -16,13 +16,14 @@ export const BREAKPOINTS = {
 
 export const getScreenSize = async () => {
   const width = window.innerWidth;
-  const { bigPhone, tablet, smallDesktop, bigDesktop } = BREAKPOINTS;
+  const { bigPhone, tablet, smallDesktop, tinyDesktop, bigDesktop } = BREAKPOINTS;
 
   console.log("WIDTH");
   console.log(width);
 
   if (width > bigDesktop) return "bigDesktop";
   if (width > smallDesktop) return "smallDesktop";
+  if (width > tinyDesktop) return "tinyDesktop";
   if (width > tablet) return "tablet";
   if (width > bigPhone) return "bigPhone";
   return "smallPhone";
@@ -31,32 +32,32 @@ export const getScreenSize = async () => {
 // Video size definitions
 export const vidDimensions = {
   bigDesktop: {
-    long: { width: "560", height: "315" },
     short: { width: "315", height: "560" },
+    long: { width: "560", height: "315" },
   },
 
   smallDesktop: {
-    long: { width: "504", height: "284" },
     short: { width: "284", height: "504" },
+    long: { width: "504", height: "284" },
   },
 
   tinyDesktop: {
-    long: { width: "392", height: "221" },
     short: { width: "221", height: "392" },
+    long: { width: "392", height: "221" },
   },
 
   tablet: {
-    long: { width: "500", height: "281" },
-    short: { width: "250", height: "444" },
+    short: { width: "315", height: "560" },
+    long: { width: "448", height: "252" },
   },
 
   bigPhone: {
-    long: { width: "560", height: "315" },
     short: { width: "315", height: "560" },
+    long: { width: "420", height: "236" },
   },
 
   smallPhone: {
-    long: { width: "410", height: "231" },
     short: { width: "300", height: "533" },
+    long: { width: "410", height: "231" },
   },
 };
