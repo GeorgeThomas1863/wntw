@@ -24,8 +24,6 @@
     gap: 1rem;
     /* margin-right: 1rem; */
   }
-
- 
 }
 
 @media (max-width: 1350px) {
@@ -54,7 +52,6 @@
   #drop-down-menu-display {
     margin-left: -5rem;
   }
-
 
   #vid-display {
     margin-right: 0;
@@ -102,10 +99,6 @@
     display: block;
   }
 
-  /* #vid-display iframe {
-    width: unset;
-  } */
-
   #tablet-row1 {
     display: flex;
     justify-content: center;
@@ -117,96 +110,89 @@
     display: flex;
     justify-content: center;
     gap: 1rem;
-  
   }
-
-  /* #tablet-row2 iframe {
-
-  } */
 }
 
 /* BIG PHONE STYLES PORTRAIT*/
 @media (max-device-width: 768px) and (orientation: portrait) {
-  /* header img {
-    width: 8rem;
+  #pic-text-container {
+    display: block;
+  }
+
+  header img {
+    width: 6rem;
   }
 
   header h1 {
-    font-size: 2.5rem;
+    margin-top: -0.5rem;
+    font-size: 3rem;
   }
 
   header p {
-    margin-top: 2.6rem;
+    font-size: 1rem;
+    margin-top: 2.7rem;
   }
 
   #drop-down {
-    margin-top: 2.5rem;
-    margin-left: -3.5rem;
+    right: 3rem;
   }
 
   #drop-down-menu-display {
-    margin-left: -1.5rem;
-  }
-
-  #drop-down-menu-display h2 {
-    font-size: 1.2rem;
-    padding: 0.5rem 1rem;
+    margin-left: -2.5rem;
   }
 
   #socials {
-    margin-top: -0.25rem;
-    margin-bottom: 0.75rem;
+    margin-top: 1.2rem;
+    margin-bottom: 1rem;
   }
-
-  #socials img {
-    height: 3.5rem;
-  } */
 
   #bigPhone-row1 {
     display: flex;
     justify-content: center;
-    gap: 1rem;
   }
-
-  /* #bigPhone-row1 iframe {
-    width: unset;
-  } */
 
   #bigPhone-row2 {
     margin-top: 1rem;
     display: flex;
     justify-content: center;
   }
-
-  /* #bigPhone-row2 iframe {
-    width: 100%;
-  } */
 }
 
 /* SMALL PHONE STYLES PORTRAIT*/
-/* @media (max-device-width: 401px) and (orientation: portrait) {
-  header img {
-    width: 6rem;
-  }
-
+@media (max-device-width: 401px) and (orientation: portrait) {
   header h1 {
-    font-size: 1.8rem;
+    margin-top: 0;
+    font-size: 2.2rem;
   }
 
   header p {
-    font-size: 0.75rem;
-    margin-top: 1.9rem;
+    font-size: 0.9rem;
+    margin-top: 2.3rem;
   }
 
   #drop-down {
-    margin-top: 1.5rem;
-    margin-left: -2rem;
+    right: 2rem;
+  }
+
+  #drop-down-menu-display {
+    margin-left: -3rem;
   }
 
   #socials img {
-    height: 3rem;
+    height: 2.5rem;
   }
-} */
+
+  #smallPhone-row1 {
+    display: flex;
+    justify-content: center;
+  }
+
+  #smallPhone-row2 {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+}
 
 /* PHONE STYLES LANDSCAPE */
 

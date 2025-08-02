@@ -57,7 +57,7 @@ export const vidDimensions = {
   },
 
   smallPhone: {
-    short: { width: "300", height: "533" },
-    long: { width: "410", height: "231" },
+    short: { width: "315", height: "560" },
+    long: { width: "392", height: "221" },
   },
 };

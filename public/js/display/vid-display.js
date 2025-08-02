@@ -39,6 +39,7 @@ export const buildVidDisplay = async (vidObj, screenSize) => {
 export const vidLayoutTemplate = async (vidObj, screenSize) => {
   const vidSize = vidDimensions[screenSize];
 
+  //EACH NEEDS TO BE ITS OWN TO GET WRITE CSS NAMES
   let containerArray = [];
   switch (screenSize) {
     case "bigDesktop":
@@ -51,13 +52,21 @@ export const vidLayoutTemplate = async (vidObj, screenSize) => {
       ];
       break;
 
-    // case "smallDesktop":
-    //   containerArray = [
-    //     { id: "bigDesktop-column1", vidSpecs: [{ size: vidSize.long, urls: [vidObj.firstLongURL, vidObj.thirdLongURL] }] },
-    //     { id: "bigDesktop-column2", vidSpecs: [{ size: vidSize.short, urls: [vidObj.firstShortURL] }] },
-    //     { id: "bigDesktop-column3", vidSpecs: [{ size: vidSize.long, urls: [vidObj.secondLongURL, vidObj.fourthLongURL] }] },
-    //   ];
-    //   break;
+    case "smallDesktop":
+      containerArray = [
+        { id: "smallDesktop-column1", vidSpecs: [{ size: vidSize.long, urls: [vidObj.firstLongURL, vidObj.thirdLongURL] }] },
+        { id: "smallDesktop-column2", vidSpecs: [{ size: vidSize.short, urls: [vidObj.firstShortURL] }] },
+        { id: "smallDesktop-column3", vidSpecs: [{ size: vidSize.long, urls: [vidObj.secondLongURL, vidObj.fourthLongURL] }] },
+      ];
+      break;
+
+    case "tinyDesktop":
+      containerArray = [
+        { id: "tinyDesktop-column1", vidSpecs: [{ size: vidSize.long, urls: [vidObj.firstLongURL, vidObj.thirdLongURL] }] },
+        { id: "tinyDesktop-column2", vidSpecs: [{ size: vidSize.short, urls: [vidObj.firstShortURL] }] },
+        { id: "tinyDesktop-column3", vidSpecs: [{ size: vidSize.long, urls: [vidObj.secondLongURL, vidObj.fourthLongURL] }] },
+      ];
+      break;
 
     case "tablet":
       containerArray = [
@@ -66,14 +75,13 @@ export const vidLayoutTemplate = async (vidObj, screenSize) => {
       ];
       break;
 
-    // case "bigPhone":
-    //   containerArray = [
-    //     { id: "bigPhone-row1", vidSpecs: [{ size: vidSize.short, urls: [vidObj.firstShortURL, vidObj.secondShortURL] }] },
-    //     { id: "bigPhone-row2", vidSpecs: [{ size: vidSize.long, urls: [vidObj.firstLongURL] }] },
-    //   ];
-    //   break;
-
     case "bigPhone":
+      containerArray = [
+        { id: "bigPhone-row1", vidSpecs: [{ size: vidSize.short, urls: [vidObj.firstShortURL] }] },
+        { id: "bigPhone-row2", vidSpecs: [{ size: vidSize.long, urls: [vidObj.firstLongURL] }] },
+      ];
+      break;
+
     case "smallPhone":
       containerArray = [
         { id: "smallPhone-row1", vidSpecs: [{ size: vidSize.short, urls: [vidObj.firstShortURL] }] },
