@@ -65,12 +65,12 @@ export const vidDimensions = {
   },
 
   bigPhone: {
-    short: { width: "315", height: "560" },
+    short: { width: "189", height: "336" },
     long: { width: "420", height: "236" },
   },
 
   smallPhone: {
-    short: { width: "315", height: "560" },
+    short: { width: "158", height: "280" },
     long: { width: "392", height: "221" },
   },
 };
